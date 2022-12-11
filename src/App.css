@@ -6,7 +6,8 @@ input {
 }
 
 input:focus {
-    background: bisque;
+    background-color: lightcyan;
+    color: blue;
 }
 
 h1 {
