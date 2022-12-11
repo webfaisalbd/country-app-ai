@@ -32,6 +32,13 @@ const App = () => {
 
   }, [])
 
+  const handleRemoveCountry = (name) => {
+    const filteredCountry = countries.filter((country) => {
+      return country.name.common !== name;
+    })
+    setCountries(filteredCountry);
+  }
+
   return (
     <>
       <h1>Country App</h1>
@@ -41,7 +48,7 @@ const App = () => {
       {/* {console.log(countries.length)} */}
 
       {
-        countries && <Countries countries={countries} />
+        countries && <Countries countries={countries} onHandleRemoveCountry={handleRemoveCountry} />
       }
     </>
   )

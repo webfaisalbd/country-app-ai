@@ -2,8 +2,13 @@ import React from 'react'
 
 import style from './Country.module.css'
 
-const Country = ({ country }) => {
+const Country = ({ country, onHandleRemoveCountry }) => {
     const { name, flags, capital, population, area } = country;
+
+    const handleRemove = (name) => {
+        onHandleRemoveCountry(name);
+    }
+
     return (
         <article className={style.cardDesign}>
             <div>
@@ -16,6 +21,9 @@ const Country = ({ country }) => {
                     <h3>Capital: {capital}</h3>
                     <h3>Area: {area}</h3>
                 </div>
+            </div>
+            <div className={style.buttonDesign}>
+                <button onClick={() => handleRemove(name.common)}>Remove</button>
             </div>
         </article>
     )

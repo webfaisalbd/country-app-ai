@@ -4,6 +4,8 @@
     background: lightseagreen;
     border-radius: 5px;
     /* border: 2px solid red; */
+
+    position: relative;
     
 }
 
@@ -24,4 +26,25 @@
 
 .countryDetails {
     padding: 10px;
+}
+
+.buttonDesign {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background: goldenrod;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+button:hover {
+    background: red;
+    font-weight: 700;
+    color: white;
 }
